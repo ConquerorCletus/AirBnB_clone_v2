@@ -1,16 +1,16 @@
 #!/usr/bin/python3
-"""
-starts a Flask web application
-"""
-
+"""A flask web application that returns 'Hello HBNB!'"""
 from flask import Flask
+
+
 app = Flask(__name__)
 
 
 @app.route('/', strict_slashes=False)
-def index():
-    """returns Hello HBNB!"""
+def hello_hbnb():
+    """Displays Hello HBNB!"""
     return 'Hello HBNB!'
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port='5000')
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=5000)
